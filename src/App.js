@@ -23,27 +23,37 @@ function App() {
     },
   ];
 
-  const [searchTerm, setSearchTerm] = React.useState('React'); // initial state : React
+  const [searchTerm, setSearchTerm] = React.useState(
+    localStorage.getItem('search') || 'React'
+  ); // initial state : React
+
+
+  // React’s useEffect Hook
+  React.useEffect(() => {
+    localStorage.setItem('search', searchTerm);
+  }, [searchTerm]);
+
 
   const handleSearch = event => {
     setSearchTerm(event.target.value);
+    //  localStorage.setItem('search', searchTerm);
   };
 
-  const searchedStories = stories.filter(story =>{
+  const searchedStories = stories.filter(story => {
     return story.title
-                .toLowerCase()
-                .includes(searchTerm.toLowerCase());
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
   });
 
   return (
     <div className="App">
-  
-    <h1>My Hacker Stories</h1>
 
-    <Search search={handleSearch} searchTerm={searchTerm}/>
-    <hr />
+      <h1>My Hacker Stories</h1>
 
-    <List list={searchedStories} />
+      <Search search={handleSearch} searchTerm={searchTerm} />
+      <hr />
+
+      <List list={searchedStories} />
 
     </div>
   );
