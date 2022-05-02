@@ -23,7 +23,7 @@ function App() {
     },
   ];
 
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = React.useState('React'); // initial state : React
 
   const handleSearch = event => {
     setSearchTerm(event.target.value);
@@ -40,9 +40,9 @@ function App() {
   
     <h1>My Hacker Stories</h1>
 
-    <Search search={handleSearch} />
-    <p>{searchTerm}</p>
+    <Search search={handleSearch} searchTerm={searchTerm}/>
     <hr />
+
     <List list={searchedStories} />
 
     </div>
