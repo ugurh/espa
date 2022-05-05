@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import List from './components/List';
-import Search from './components/Search';
+import Search from './components/Search'
 import  useSemiPersistentState from './hooks/UseSemiPersistentState'
 
 function App() {
