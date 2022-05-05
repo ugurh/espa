@@ -2,7 +2,9 @@ import './App.css';
 import React from 'react';
 import List from './components/List';
 import Search from './components/Search'
-import  useSemiPersistentState from './hooks/UseSemiPersistentState'
+import useSemiPersistentState from './hooks/UseSemiPersistentState'
+import Counter from './components/Counter';
+import UrlList from './components/UrlList'
 
 function App() {
   const stories = [
@@ -46,6 +48,10 @@ function App() {
 
       <List list={searchedStories} />
 
+      <hr />
+      <Counter />
+      <hr />
+      <UrlList />
     </div>
   );
 }
