@@ -6,6 +6,7 @@ import useSemiPersistentState from './hooks/UseSemiPersistentState'
 import Counter from './components/Counter';
 import UrlList from './components/UrlList'
 import OpenClose from './hooks/OpenClose'
+import SessionStatus from './hooks/SessionStatus';
 
 function App() {
   const stories = [
@@ -55,6 +56,8 @@ function App() {
       <UrlList />
       <hr />
       <OpenClose />
+      <hr />
+      <SessionStatus />
     </div>
   );
 }
