@@ -5,6 +5,7 @@ import Search from './components/Search'
 import useSemiPersistentState from './hooks/UseSemiPersistentState'
 import Counter from './components/Counter';
 import UrlList from './components/UrlList'
+import OpenClose from './hooks/OpenClose'
 
 function App() {
   const stories = [
@@ -52,6 +53,8 @@ function App() {
       <Counter />
       <hr />
       <UrlList />
+      <hr />
+      <OpenClose />
     </div>
   );
 }
