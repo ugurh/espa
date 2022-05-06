@@ -1,10 +1,11 @@
 import React from 'react'
+import InputWithLabel from './InputWithLabel';
 
-// Search({ search, onSearch }) 
+// Search({ search, onSearch })
 export const Search = ({ searchTerm, search }) => (
   <>
     <label htmlFor="search">Search: </label>
-    <input id="search" type="text" value={searchTerm} onChange={search} />
+    <InputWithLabel id="search" value={searchTerm} onChange={search} />
   </>
 );
 
